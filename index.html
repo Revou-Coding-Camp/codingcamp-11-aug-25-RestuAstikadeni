@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project Revou</title>
+    <meta
+      name="description"
+      content="A simple website demonstrating parallax scrolling using Tailwind CSS and vanilla JavaScript."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      [data-parallax] {
+        will-change: transform;
+        transition: transform 0.06s linear;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 selection:bg-indigo-500/30">
+    <header
+      class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-zinc-900/60 border-b border-white/10"
+    >
+      <div
+        class="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between"
+      >
+        <!-- Logo + Nama -->
+        <div class="flex items-center gap-2">
+          <img
+            src="https://i.pravatar.cc/40"
+            alt="Profile Logo"
+            class="w-8 h-8 rounded-full object-cover"
+          />
+          <a href="#top" class="font-semibold tracking-wide text-white"
+            >Travelify</a
+          >
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden sm:flex gap-6 text-sm">
+          <a href="#hero" class="hover:text-indigo-300 text-white">Home</a>
+          <a href="#cards" class="hover:text-indigo-300 text-white"
+            >Our Profile</a
+          >
+          <a href="#layers" class="hover:text-indigo-300 text-white"
+            >Portofolio</a
+          >
+          <a href="#footer" class="hover:text-indigo-300 text-white"
+            >Massage Us</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="h-14" id="top"></div>
+
+    <section id="hero" class="relative h-[90vh] sm:h-[100vh] overflow-hidden">
+      <div
+        class="absolute inset-0 bg-fixed bg-center bg-cover"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+        "
+      ></div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div
+        class="relative z-10 max-w-4xl mx-auto px-6 h-full grid place-items-center text-center"
+      >
+        <div>
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+            Welcome to Our Website
+          </h1>
+          <p class="mt-4 text-lg sm:text-xl text-zinc-200">
+            Discover the World, One Journey at a Time
+          </p>
+          <a
+            href="#cards"
+            class="inline-block mt-8 rounded-2xl bg-indigo-500 hover:bg-indigo-400 px-6 py-3 font-medium shadow-lg shadow-indigo-500/20"
+            >Explore</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Profile -->
+    <section id="cards" class="py-24 bg-gradient-to-b from-zinc-950 to-zinc-900 min-h-screen">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-white">Our Profile</h2>
+    <p class="mt-4 text-zinc-300 leading-relaxed">
+      <span class="font-semibold">Travelify</span> was born from the belief that 
+      traveling is one of life’s most rewarding experiences. Since our founding, 
+      we have been committed to opening the world to curious minds and adventurous souls. 
+      We are not just a travel company — we are storytellers, experience crafters, and 
+      passionate guides dedicated to helping you see the world in its most authentic form. 
+      <br><br>
+      Our mission is to make every journey meaningful. Whether you are searching for 
+      hidden gems in exotic destinations, exploring rich cultural traditions, or 
+      simply looking to relax on pristine beaches, our tailored travel services ensure 
+      that every trip is designed with your comfort and dreams in mind. We work closely 
+      with local communities and trusted partners to guarantee authentic experiences, 
+      safe adventures, and responsible tourism practices that give back to the places 
+      we visit. 
+      <br><br>
+      At Travelify, we believe that travel is about more than just reaching a destination — 
+      it’s about the journey itself. From the moment you book with us until the day you 
+      return home, our dedicated team is here to provide guidance, support, and personalized 
+      care. With years of expertise, a global network, and a deep love for exploration, 
+      we take pride in turning your travel aspirations into lasting memories. 
+      <br><br>
+      Join us as we continue to inspire, connect, and transform lives through the power of travel. 
+      Your next adventure awaits, and we are here to make it extraordinary.
+    </p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Portfolio -->
+    <section id="cards" class="py-24 bg-gradient-to-b from-zinc-950 to-zinc-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-white">Portfolio</h2>
+    <p class="mt-2 text-zinc-300">
+      A showcase of curated trips and travel experiences we’ve designed for our guests.
+    </p>
+
+    <!-- Row 1 -->
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Bali Escape -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+               alt="Bali Escape">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Bali Escape – Beach & Culture</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Uluwatu sunsets, Ubud rice terraces, and Balinese rituals in a 5-day slow-travel itinerary.
+          </p>
+      </article>
+
+      <!-- Alpine Trek -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
+               alt="Alpine Trek">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Alpine Trek – Peaks & Lakes</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Scenic hikes, mountain huts, and glacier viewpoints for active explorers.
+          </p>
+      </article>
+
+      <!-- Tokyo City Break -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop"
+               alt="Tokyo City Break">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Tokyo City Break</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Neon nights, sushi workshops, and hidden alleys with our local host.
+          </p>
+      </article>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Island Hopping -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+               alt="Island Hopping">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Island Hopping – Turquoise Trails</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Private boat, coral reefs, and secluded beaches for the perfect summer.
+          </p>
+      </article>
+
+      <!-- Cultural Immersion -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop"
+               alt="Cultural Immersion">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Cultural Immersion</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Homestays, cooking classes, and community-led tours—travel that gives back.
+          </p>
+      </article>
+
+      <!-- Luxury Desert Retreat -->
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/60 overflow-hidden">
+        <div class="h-40 w-full overflow-hidden">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
+               alt="Luxury Retreat">
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Luxury Desert Retreat</h3>
+          <p class="mt-2 text-sm text-zinc-300">
+            Sunset dunes, stargazing dinners, and spa indulgence in the silence of the sands.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact / Message Us -->
+    <section id="contact" class="relative py-16 min-h-[560px] overflow-hidden">
+      <!-- Parallax background -->
+      <div
+        class="absolute inset-0 bg-fixed bg-cover bg-center"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop');
+        "
+      ></div>
+      <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-black mb-8">Message Us</h2>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- LEFT: FORM -->
+          <form
+            id="contactForm"
+            class="rounded border border-gray-300 bg-white p-6"
+          >
+            <!-- Nama -->
+            <div
+              class="grid grid-cols-[140px,10px,1fr] items-center gap-2 mb-4"
+            >
+              <label for="name" class="text-black">Nama</label>
+              <span class="text-black">:</span>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Nama"
+                required
+                class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+              />
+            </div>
+            <!-- Tanggal Lahir -->
+            <div
+              class="grid grid-cols-[140px,10px,1fr] items-center gap-2 mb-4"
+            >
+              <label for="dob" class="text-black">Tanggal Lahir</label>
+              <span class="text-black">:</span>
+              <input
+                id="dob"
+                name="dob"
+                type="date"
+                required
+                class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+              />
+            </div>
+            <!-- Jenis Kelamin -->
+            <div
+              class="grid grid-cols-[140px,10px,1fr] items-center gap-2 mb-4"
+            >
+              <span class="text-black">Jenis Kelamin</span>
+              <span class="text-black">:</span>
+              <div class="flex items-center gap-6">
+                <label class="inline-flex items-center gap-2 text-black">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Laki-Laki"
+                    required
+                    class="accent-blue-600"
+                  />
+                  <span>Laki-Laki</span>
+                </label>
+                <label class="inline-flex items-center gap-2 text-black">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Perempuan"
+                    class="accent-blue-600"
+                  />
+                  <span>Perempuan</span>
+                </label>
+              </div>
+            </div>
+            <!-- Pesan -->
+            <div class="grid grid-cols-[140px,10px,1fr] gap-2 mb-6">
+              <label for="message" class="text-black self-start">Pesan</label>
+              <span class="text-black">:</span>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Pesan"
+                class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                required
+              ></textarea>
+            </div>
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="w-full rounded bg-gray-300 px-4 py-2 text-black hover:bg-gray-200 transition"
+            >
+              Submit
+            </button>
+          </form>
+
+          <!-- RIGHT: PREVIEW PANEL -->
+          <aside class="rounded border border-gray-400 bg-white p-6 text-black">
+            <div class="mb-4">
+              <span class="font-semibold">Current time</span>
+              <span id="pvNow" class="ml-2">—</span>
+            </div>
+            <div class="border border-gray-300 p-4">
+              <p>
+                <span class="font-semibold">Nama</span> :
+                <span id="pvName">—</span>
+              </p>
+              <p class="mt-1">
+                <span class="font-semibold">Tanggal Lahir</span> :
+                <span id="pvDob">—</span>
+              </p>
+              <p class="mt-1">
+                <span class="font-semibold">Jenis Kelamin</span> :
+                <span id="pvGender">—</span>
+              </p>
+              <p class="mt-1">
+                <span class="font-semibold">Pesan</span> :
+                <span id="pvMessage">—</span>
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-gray-500">
+      © 2025 – Mini Project
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
